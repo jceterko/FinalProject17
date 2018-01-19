@@ -1,3 +1,6 @@
+import sys
+# importing sys function to stop game
+
 class Character(object):
     def __init__(self, name, species, famous_quote, advance, fail):
         self.name = name
@@ -46,7 +49,7 @@ ans1 = 'dean'
 com1 = {'ques' : ques1, 'ans' : ans1}
 
 ques2 = 'Who killed Sam and Dean\'s mom?'
-ans2 = 'Azazel'
+ans2 = 'azazel'
 com2 = {'ques' : ques2, 'ans' : ans2}
 
 ques3 = 'How many seasons of Supernatural are there?'
@@ -88,7 +91,7 @@ def questions1():
     else:
         print(f'{crow.name}: {crow.fail}')
         print('Whelp, you died')
-        print('GAME OVER')
+        sys.exit('GAME OVER')
 # defining a function to ask the questions for stage 1 and what to do when the question is answered
 
 counter2 = 3
@@ -103,7 +106,7 @@ def questions2():
     else:
         print(f'{lil.name}: {lil.fail}')
         print('Whelp, you died')
-        print('GAME OVER')
+        sys.exit('GAME OVER')
 # defining a function to ask the questions for stage 2 and what to do when the question is answered
 
 counter3 = 6
@@ -118,11 +121,12 @@ def questions3():
     else:
         print(f'{crow.name}: {crow.fail}')
         print('Whelp, you died')
-        print('GAME OVER')
+        sys.exit('GAME OVER')
 # defining a function to ask the questions for stage 3 and what to do when the question is answered
 
-for x in range(3):
-    questions1()
+questions1()
+questions1()
+questions1()
 # asking the first round of questions
 
 print(f'{crow.name}: This will not be the end of me! I will be back! Just watch your pretty little ....')
@@ -145,14 +149,17 @@ print(f'{c}: wow, what a surprise')
 print(f'Well it looks like you got onto {lil.name}\'s bad side, now here comes another set of questions!')
 # introducing lilith and stage 2
 
-for x in range(3):
-    questions2()
+questions2()
+questions2()
+questions2()
 # asking next 3 questions for stage 2
 
 print(f'I am not gonna lie, I am quite flabbergasted. I was not expecting you to defeat {lil.name} so HEY YOUR STILL ALIVE! Buttttt you are not done yet, now you only have to get through one more door, specifically the blue door that looks like it is begging someone to smash into it.')
 # leaving stage 3
 
 respone = input(f'Now {c}, do you want to go through the door?')
+# defining variable to ask the question
+
 if response == 'yes':
     print(f'You touch the door and it turns into a pile of dust at your feet (shocker). You strut through the door like you are on the next episode of America\'s Top Model because {cas.name} got hold of the Netflix again and you just cannot help youself. When BAMM! Some random dude smashes through the wall.')
 elif response == 'no':
@@ -167,10 +174,21 @@ print(f'{c}: Alright alright I am not here to chat {luc.name} and don\'t you rem
 print(f'{luc.name}: Ok if you just wanna get the suffering over with now then here we go! Let the fun begin!')
 # introducing stage 3
 
-for x in range(3):
-    questions3()
+questions3()
+questions3()
+questions3()
+# asking questions for stage 3
 
-
+print(f'OMG OMG OMG OMG YOU ACTUALLY DEFEATED {luc.name} OH S**T YOU DID IT!')
+print(f'Ok now all you have to do is open that dirty looking box')
+response = input(f'Do you want to open the box {c}? )
+if response == 'yes':
+    print(f'LOOK! It\'s the colt! Great work {c}!')
+elif response == 'np':
+    print(f'Well screw you {c}. Now you ded.')
+else:
+    print(f'Are you talking in like a different language or something? Whatever, you open the box and discover the colt! Great work {c}!')
+# using if else statement to open the box and end the game
 
 
 
