@@ -1,6 +1,7 @@
 import sys
 # importing sys function to stop game
 
+
 class Character(object):
     def __init__(self, name, species, famous_quote, advance, fail):
         self.name = name
@@ -8,6 +9,7 @@ class Character(object):
         self.famous_quote = famous_quote
         self.advance = advance
         self.fail = fail
+""" Creating a class for the characters in the game. The class consists of the name, species, introduction, advance and fail arguments """
 
 cas = Character("Castiel", "angel", "I'll interrogate the cat.","yay! XD", "gosh darnit.")
 d = Character("Dean", "human", "I mean, come on. We hunt monsters. Normal people, they see a monster and they run, but not us. We search out things that want to kill us. You know who does that? CRAZY PEOPLE.", "HECK YEA HAHAHAHAHA!", "WHAT DO YOU MEAN! F**K, LIKE CMON!")
@@ -15,7 +17,7 @@ s = Character("Sam", "human", "I lost my shoe!" , "Niceee." , "whelp, rip me.")
 crow = Character("Crowley", "King of Hell", "I was an attractive child. I could juggle. I was worth five pigs at least.", "NOOOOOOOOOOO!!!!!!", "BAHAHAHAHAHAHA SUCKS FOR YOU!" )
 lil = Character("Lilith", "demon", "The first demon Lucifer has created.", "How is that even possible!!!!", "Have fun in hell suckerssss!")
 luc = Character("Lucifer", "angel", "Narcissistic personality disorder...Ok, this one I could have.", 'I hate you all.' , "Such a fool, you will never learn.")
-# Creating character class
+# Creating character class for their name, species, introduction and what they say when you advance or fail a question
 
 print("""Welcome to Supernatural Trivia! You are going to answer questions in order to defeat your enemy.
 There will be 3 enemies, 3 stages and each one will get harder as you go. Now lets introduce our characters.""")
